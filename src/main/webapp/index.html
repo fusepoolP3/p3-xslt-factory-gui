@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <title>Batchrefine Transformer Factory UI</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+        <link href="css/site.css" type="text/css" rel="stylesheet" />
+        <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    </head>
+
+    <body role="document">  
+        <!-- Fixed navbar -->
+        <!-- navbar-default -->
+        <div id="menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Batchrefine  Transformer Factory UI</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <div style="float: right;">
+                        <img src="images/fusepool.png" alt="Fusepool P3" height="45">
+                    </div>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <div id="container" class="container theme-showcase" role="main">	 
+            <div class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="refineJson" class="col-sm-2 control-label">
+                    URI of the Refine JSON: 
+                </label>
+                <div class="col-sm-10"><input type="text" name="refineJson" id="refineJson" size="80" value="http://" /><br/>
+                    <span style="color: gainsboro">(e.g. https://raw.githubusercontent.com/fusepoolP3/batchrefine/master/engines/engines-core/src/test/resources/transforms/osterie-rdfize.json)</span></div>
+            </div>
+            <div class="form-group">
+                <label for="transformerBase" class="col-sm-2 control-label">
+                    Refine Transformer Base URI:
+                </label>
+                <div class="col-sm-10"><input type="text" id="transformerBase" name="transformerBase" size="80"/></div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10"><button id="generate" value="Generate Transformer" >Generate Transformer</button></div>
+            </div>            
+            <div id="resultDiv">
+                <div class="form-group">
+                    <label for="resultValue" class="col-sm-2 control-label">
+                        Transformer URI:
+                    </label>
+                    <div class="col-sm-10"><input id="resultValue" name="resultValue" type="text" size="120" /></div>
+                </div>
+                <div class="form-group">
+                    <label for="resultValue" class="col-sm-2 control-label">
+                        <button id="register">Register in transformer registry at:</button>
+                    </label>
+                    <div class="col-sm-10"><input type="text" id="transformerRegistry" size="80"/></div>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="alert alert-danger" style="margin-bottom: 0px;display:none" role="alert" id="add-alert" ></div>
+                    <div class="alert alert-success" style="margin-bottom: 0px;display:none" role="alert" id="add-success"></div>
+                </div>
+            </div>    
+            </div>
+        </div>
+
+        <!-- ================================================== -->
+        <!-- JavaScript placed at the end of the document so the pages load faster -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <script src="js/utils.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+    </body>
+</html>
