@@ -20,9 +20,10 @@ public class Main {
     private static void start(Arguments arguments) throws Exception {
         Server server = new Server(arguments.getPort());
 
-        WebAppContext webAppContext = new WebAppContext("./src/main/webapp", "/");
+        WebAppContext webAppContext = new WebAppContext();//"./src/main/webapp", "/");
         webAppContext.setLogUrlOnStart(true);
         webAppContext.setWelcomeFiles(new String[]{"index.html"});
+        webAppContext.setResourceBase(Main.class.getResource("/webapp/").toExternalForm());
         webAppContext.configure();
 
         server.setHandler(webAppContext);

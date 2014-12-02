@@ -26,7 +26,4 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
-    <listener>
-        <listener-class>eu.fusepool.p3.gui.batchrefine.server.AppContextListener</listener-class>
-    </listener>
 </web-app>
