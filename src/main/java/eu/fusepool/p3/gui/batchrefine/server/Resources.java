@@ -1,4 +1,4 @@
-package eu.fusepool.p3.gui.batchrefine.server;
+package eu.fusepool.p3.gui.xslt.server;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

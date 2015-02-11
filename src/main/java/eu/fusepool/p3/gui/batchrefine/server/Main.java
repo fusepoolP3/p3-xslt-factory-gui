@@ -1,4 +1,4 @@
-package eu.fusepool.p3.gui.batchrefine.server;
+package eu.fusepool.p3.gui.xslt.server;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;

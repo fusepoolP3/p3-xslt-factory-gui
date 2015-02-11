@@ -9,7 +9,7 @@ $(document).ready(function () {
     var resultDiv = $("#resultDiv");
     resultDiv.hide();
     function transformerUri() {
-        return tranformerBase+"?refinejson="+encodeURIComponent($("#refineJson").val());
+        return tranformerBase+"?xslt="+encodeURIComponent($("#xslt").val());
     }
     $('#generate').on("click", function() {
         $('#resultValue').val(transformerUri());
@@ -22,12 +22,12 @@ $(document).ready(function () {
             "@prefix trldpc: <http://vocab.fusepool.info/trldpc#> ."+
             "<> a trldpc:TransformerRegistration;"+
             "    trldpc:transformer <"+transformerUri()+">;"+
-            "    dct:title 'Batchrefine transformer'@en;"+
-            "    dct:description 'A Batchrefine transformer using "+$("#refineJson").val()+"'.";
+            "    dct:title 'XSLT transformer'@en;"+
+            "    dct:description 'An XSLT transformer using "+$("#xslt").val()+"'.";
         //hideMessages();
         startLoading();
         var container = $("#transformerRegistry").val();
-        var tentativeName = "batchrefine-transformer";
+        var tentativeName = "xslt-transformer";
         var headerCollection = { "Slug" : tentativeName };
         function registerSuccess(response, textStatus, request) {
             // Getting the name of the created resource & letting the user know about the successful creation

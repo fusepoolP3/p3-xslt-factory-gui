@@ -1,5 +1,5 @@
 
-A GUI to configure a batchrefine-transfomer.
+A GUI to configure a xslt-transfomer.
 
 Compile with
 
@@ -9,9 +9,9 @@ Compile with
 and start with
 
     cd target
-    java -jar p3-batchrefine-transformer-factory-gui-*-jar-with-dependencies.jar
+    java -jar p3-xslt-transformer-factory-gui-*-jar-with-dependencies.jar
 
 
 Now you should be able to access the service at:
 
-    http://localhost:8101/?transformerBase=http://hetzy1.spaziodati.eu:7100/&transformerRegistry=http://sandbox.fusepool.info:8181/ldp/tr-ldpc#
+    http://localhost:8101/?transformerBase=http://sanbox.fusepool.info:8164&transformerRegistry=http://sandbox.fusepool.info:8181/ldp/tr-ldpc#
