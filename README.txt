@@ -14,4 +14,4 @@ and start with
 
 Now you should be able to access the service at:
 
-    http://localhost:8101/?transformerBase=http://sanbox.fusepool.info:8164&transformerRegistry=http://sandbox.fusepool.info:8181/ldp/tr-ldpc#
+    http://localhost:8204/?transformerBase=http://sanbox.fusepool.info:8164&transformerRegistry=http://sandbox.fusepool.info:8181/ldp/tr-ldpc#
