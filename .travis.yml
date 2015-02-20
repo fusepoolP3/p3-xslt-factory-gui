@@ -3,7 +3,7 @@ before_install: mvn install -DskipTests=true -DfinalName=xslt-factory-gui-$TRAVI
 deploy:
   provider: releases
   api_key:
-    secure: LZJ+lQmKb0ZarneNSDv79ctKnxLFptRRM2bxElrIcdZ8zH2kuwtiuK3Lbiz88yJOfpZnP2HIqAbpaBTxiO/6B7HsoSoO+UHvRD/08RA9/hL0Ey8ignTf0bG7h1djp1fPdJIcz6lb3nvOyX8Mx6lar7naPbPlZAUHTh3h/swQdm0=
+    secure: Gncj7vxh4ghwQANAAFYDAeWELECXfDJtojXGlV7iFwEYF4UlMMoF9brWMilGElFzdv/MN/GHbnHfM3vlySHymZnZKq87eDG/BH1O1eLpR1ONamAj/PdL/87tgH0yj5fT2jMvx5jeN0i+NuObha1YrmkcH16e4nflEf25esAtG3k=
   file: target/xslt-factory-gui-$TRAVIS_TAG-jar-with-dependencies.jar
   on:
     repo: fusepoolP3/p3-xslt-factory-gui
