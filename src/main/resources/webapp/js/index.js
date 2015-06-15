@@ -1,17 +1,18 @@
 var transformerBase;
-var tranformerRegistry;
+var transformerRegistry;
 
 $(document).ready(function () {
-    tranformerBase = getURLParameter('transformerBase');
-    tranformerRegistry = getURLParameter('transformerRegistry');
-    $("#transformerBase").val(tranformerBase);
-    $("#transformerRegistry").val(tranformerRegistry);
+	
+    setURIParameters(fillInputs);
+	
     var resultDiv = $("#resultDiv");
     resultDiv.hide();
-    function transformerUri() {
-        return tranformerBase+"?xslt="+encodeURIComponent($("#xslt").val());
+    
+	function transformerUri() {
+        return transformerBase+"?xslt="+encodeURIComponent($("#xslt").val());
     }
-    $('#generate').on("click", function() {
+    
+	$('#generate').on("click", function() {
         $('#resultValue').val(transformerUri());
         resultDiv.show();
         return false;
@@ -48,16 +49,15 @@ $(document).ready(function () {
         saveContent(container, postBody, headerCollection, "text/turtle", registerSuccess, registerFail);
         return false;
     });
-    $("#resultValue").prop("readonly",true);
-    
-    //createProgressDialog();
-    //createAlertDialog();
-    //createAddDialog();
-
+    $("#resultValue").prop("readonly", true);
+	
     url = location.protocol + '//' + location.hostname + ':' + location.port + '/';
-
-    //refreshContainers();
 });
+
+function fillInputs() {	
+    $("#transformerBase").val(transformerBase);
+    $("#transformerRegistry").val(transformerRegistry);
+}
 
 function saveContent(container, data, headers, contentType, saveSuccess, saveFail) {
 	
