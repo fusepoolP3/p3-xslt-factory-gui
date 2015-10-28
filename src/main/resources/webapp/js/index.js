@@ -9,7 +9,7 @@ $(document).ready(function () {
     resultDiv.hide();
     
 	function transformerUri() {
-        return transformerBase+"?xslt="+encodeURIComponent($("#xslt").val());
+        return transformerBase+"?xslt="+encodeURIComponent($.trim($("#xslt").val()));
     }
     
 	$('#generate').on("click", function() {
@@ -24,10 +24,10 @@ $(document).ready(function () {
             "<> a trldpc:TransformerRegistration;"+
             "    trldpc:transformer <"+transformerUri()+">;"+
             "    dct:title 'XSLT transformer'@en;"+
-            "    dct:description 'An XSLT transformer using "+$("#xslt").val()+"'.";
+            "    dct:description 'An XSLT transformer using "+$.trim($("#xslt").val())+"'.";
         //hideMessages();
         startLoading();
-        var container = $("#transformerRegistry").val();
+        var container = $.trim($("#transformerRegistry").val());
         var tentativeName = "xslt-transformer";
         var headerCollection = { "Slug" : tentativeName };
         function registerSuccess(response, textStatus, request) {
